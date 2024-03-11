@@ -2,6 +2,7 @@ let api = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/USD`;
 const fromDropDown = document.getElementById('fromCurrency');
 const toDropDown = document.getElementById('toCurrency');
 const result = document.querySelector('.result');
+const swap= document.querySelector('#swapButton');
 
 currencies.forEach((currency) => {
     const option = document.createElement('option');
@@ -19,6 +20,13 @@ currencies.forEach((currency) => {
 
 fromDropDown.value = "USD";
 toDropDown.value = "INR";
+
+swap.addEventListener('click', () => {
+    const temp = fromDropDown.value;
+    fromDropDown.value = toDropDown.value;
+    toDropDown.value = temp;
+    convertCurrency();
+})
 
 let convertCurrency = () => {
     const amount = document.getElementById('amount').value;

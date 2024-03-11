@@ -105,3 +105,25 @@ button{
     font-size: 1.2em;
     background-color:#66c77ca7 ;
 }
+button#swapButton {
+  width: 3em; /* Set a specific width for the swap button */
+  height: 1.7em; /* Set a specific height for the swap button */
+  padding: 0.2em; /* Adjust padding for the swap button */
+  font-weight: 600;
+  color: #fff;
+  font-size: 1em; /* Adjust font size for the swap button */
+  background-color: transparent;
+  border: none;
+  border-radius: 0.2em;
+  cursor: pointer;
+  margin-top: 1em; /* Add margin-top to align with the result */
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5em;
+  justify-content: center;
+}
+#swapButton>img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
